@@ -80,7 +80,7 @@ async function searchDocumentChunks(searchTerms: string[], db: DrizzleD1Database
 // Helper function to perform reciprocal rank fusion
 function performReciprocalRankFusion(
   fullTextResults: DocumentChunk[],
-  vectorResults: VectorizeMatches[]
+  vectorResults: any[]
 ): { id: string; score: number }[] {
   const k = 60; // Constant for fusion, can be adjusted
   const scores: { [id: string]: number } = {};
